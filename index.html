@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A single-page CV.">
+    <meta name="keywords" content="CV, HTML, CSS, JavaScript, Java, C#, MySQL, bootstrap, Responsive Web Design">
+    <meta name="author" content="Kristoffer Knutsen">
+    <meta property="og:title" content="Kristoffer Knutsen - CV">
+    <meta property="og:description" content="A singple page CV">
+    <meta property="og:type" content="website">
+    <title>Kristoffer Knutsen - CV</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to a CSS file for styling -->
+    <!-- Favicon -->
+    <link rel="icon" href="/facicon.ico" type="image/x-icon">
+
+</head>
+<body>
+<header>
+    <br><br>
+    <hr>
+    <br>
+    <h1>Kristoffer Knutsen</h1>
+</header>
+
+<main>
+    <section id="about">
+        <h3 style="color: green;">Web-developer and Ecommerce-Consultant</h3>
+        <p>3080 Holmestrand</p>
+        <p>
+            <a href="mailto:kristoffer.i.knutsen@gmail.com">kristoffer.i.knutsen@gmail.com</a>
+        </p>
+        <p>
+            <a href="tel:+4745392228">+47 453 92 228</a>
+        </p>
+    </section>
+    <br>
+    <section id="work-skills">
+        <h4 style="color: green;">Skills</h4>
+        <p>HTML, CSS/SCSS, JavaScript, Java, C#, MySQL, bootstrap, Responsive Web Design</p>
+    </section>
+    <br>
+    <section id="education">
+        <h4 style="color: green;">Education</h4>
+
+        <div id="relevant-education" style="display: block;">
+            <h5 style="color: lightblue;">GET Academy, Larvik</h5>
+            <p>August 2021 - Februar 2022</p>
+            <p>Bootcamp for HTML, CSS, JavaScript and C#</p>
+        </div>
+
+        <div id="all-education" style="display: none;">
+            <br>
+
+            <h5 style="color: lightblue;">Idefagskolen</h5>
+            <p>September 2012 - June 2014</p>
+            <p>1 year 3D Design, and 1 year 3D Animation</p>
+
+            <br>
+
+            <h5 style="color: lightblue;">Holmestrand VGS</h5>
+            <p>August 2010 - Juni 2011</p>
+            <p>General university admissions certification</p>
+
+            <br>
+
+            <h5 style="color: lightblue;">Holmestrand VGS</h5>
+            <p>August 2008 - Juni 2010</p>
+            <p>Culinary Arts and Restaurant Service program</p>
+        </div>
+
+        <p id="show-all-education">
+            <a href="#" onclick="showAllEducation('all-education', this)">Show all...</a>
+        </p>
+
+    </section>
+    <br>
+    <section id="experience">
+        <h4 style="color: green;">Experience</h4>
+
+        <div id="relevant-experience">
+            <h5 style="color: lightblue">Gurusoft AS</h5>
+            <p style="font-weight: bold">Web-developer and Ecommerce consultant</p>
+            <p>May 2022 - today</p>
+            <p>Skills: HTML, MySQL, Java, JavaScript, SCSS and Velocity</p>
+        </div>
+
+        <div id="all-experience" style="display: none;">
+            <br>
+
+            <h5 style="color: lightblue">Falck Callcenter</h5>
+            <p>Senior customer service manager</p>
+            <p>April 2016 - October 2018</p>
+            <p>Skills: Customer service, roadside assistance in Norway and International</p>
+
+            <br>
+
+            <h5 style="color: lightblue">Holmestrand Bingo</h5>
+            <p>Employee</p>
+            <p>October 2014 - October 2015</p>
+            <p>Skills: Customer service</p>
+
+            <br>
+
+            <h5 style="color: lightblue">Sofus Kiosk</h5>
+            <p>Employee</p>
+            <p>September 2011 - May 2012</p>
+            <p>Skills: Customer service</p>
+
+            <br>
+
+            <h5 style="color: lightblue">Naustet Pub</h5>
+            <p>Chef, waiter and bartender</p>
+            <p>May 2011 - September 2011</p>
+            <p>Skills: Head chef, preparing food, ordering ingredients. Serving food.</p>
+        </div>
+
+        <p id="show-all-experience">
+            <a href="#" onclick="showAllEducation('all-experience', this)">Show all...</a>
+        </p>
+    </section>
+    <br>
+    <section id="contact">
+        <h4 style="color: green;">Across the Internet</h4>
+
+        <ul>
+            <li>
+                <a href="https://github.com/imsern">GitHub</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/kristoffer-knutsen-9ab3ba1b4/">LinkedIn</a>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p style="text-align: center">2023 Kristoffer Knutsen. All nights preserved.</p>
+</footer>
+</body>
+</html>
+
+<script>
+    function showAllEducation(id, linkElement) {
+        const element = document.getElementById(id);
+        if( element.style.display === "none") {
+            element.style.display = "block";
+            linkElement.innerHTML = "Hide all...";
+        }
+        else if( element.style.display === "block") {
+            element.style.display = "none";
+            linkElement.innerHTML = "Show all...";
+        }
+    }
+</script>
